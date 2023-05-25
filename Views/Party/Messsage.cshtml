@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_layout_ofMe";
+    @model List<Party>
+}
+
+<div class="custom_heading-container mt-5">
+    <h2>
+         Congratultion Message   
+    </h2>
+</div>
+
+<section class="contact_section m-5 layout_padding">
+<div class="row">
+@foreach (var item in Model)
+    {
+        <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Name</h5>
+                    <p class="card-text">@item.Message_con</p>
+                    <a href="/Party/Index" class="btn btn-primary">Go Home</a>
+                </div>
+            </div>
+        </div>
+    }
+    
+    
+</div>
+</section>

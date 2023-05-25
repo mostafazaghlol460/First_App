@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_layout_ofMe";
+    @model List<Party>
+}
+<section class="contact_section m-5 layout_padding">
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">name</th>
+            <th scope="col">Email_Party</th>
+            <th scope="col">Phone_Party</th>
+            <th scope="col">Congratulation message</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int i = 1;
+        }
+        @foreach (var item in Model)
+    {
+        <tr>
+            <td>@(i++)</td>
+            <td>@item.Name</td>
+            <td>@item.Email</td>
+            <td>@item.phone</td>
+            <td>@item.Message_con</td>
+
+
+        </tr>
+    }
+  </tbody>
+</table>
+</section>
